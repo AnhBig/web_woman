@@ -52,6 +52,7 @@
                                 <tr>
                                     <th>STT</th>
                                     <th>Tên</th>
+                                    <th>Mã code</th>
                                     <th>Loại</th>
                                     <th>Số tiền giảm giá</th>
                                     <th>Hạn sử dụng</th>
@@ -65,6 +66,7 @@
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $item->name }}</td>
+                                        <td>{{ $item->name_code }}</td>
                                         <td>{{ $item->type }}</td>
                                         <td>{{ $item->percent_amount }}</td>
                                         <td>{{ date('d/m/Y', strtotime($item->expire_date)) }}</td>

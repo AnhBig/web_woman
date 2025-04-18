@@ -34,7 +34,7 @@
                      <span class="nav-title">Thương hiệu</span>
                  </a>
              </li>
-             
+
              <li class="{{ request()->segment(2) == 'product' ? 'active' : '' }}">
                  <a href="{{ route('product.index') }}" aria-expanded="false">
                      <i class="nav-icon fa fa-product-hunt"></i>
@@ -47,20 +47,31 @@
                      <span class="nav-title">Mã giảm giá</span>
                  </a>
              </li>
-            
-             <li @if (request()->segment(2) == 'order' || request()->segment(2) == 'order_confirm' || request()->segment(2) == 'order_shipping' || request()->segment(2) == 'order_waiting' || request()->segment(2) == 'order_success' || request()->segment(2) == 'order_cancelled' || request()->segment(2) == 'order_return')
-                class="active"                 
-             @endif
-             ><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i
-                         class="nav-icon ti ti-calendar"></i><span class="nav-title">Đơn hàng</span></a>
+
+             <li @if (request()->segment(2) == 'order' ||
+                     request()->segment(2) == 'order_confirm' ||
+                     request()->segment(2) == 'order_shipping' ||
+                     request()->segment(2) == 'order_waiting' ||
+                     request()->segment(2) == 'order_success' ||
+                     request()->segment(2) == 'order_cancelled' ||
+                     request()->segment(2) == 'order_return') class="active" @endif><a class="has-arrow" href="javascript:void(0)"
+                     aria-expanded="false"><i class="nav-icon ti ti-calendar"></i><span class="nav-title">Đơn
+                         hàng</span></a>
                  <ul aria-expanded="false">
-                     <li class="{{ request()->segment(2) == 'order' ? 'active' : '' }}"> <a href="{{ route('adminOrder') }}">Tất cả đơn hàng</a> </li>
-                     <li class="{{ request()->segment(2) == 'order_confirm' ? 'active' : '' }}"> <a href="{{ route('orderConfirm') }}">Chờ xác nhận</a> </li>
-                     <li class="{{ request()->segment(2) == 'order_shipping' ? 'active' : '' }}"> <a href='{{ route('orderShipping') }}'>Vận chuyển</a></li>
-                     <li class="{{ request()->segment(2) == 'order_waiting' ? 'active' : '' }}"> <a href='{{ route('orderWaiting') }}'>Chờ giao hàng</a></li>
-                     <li class="{{ request()->segment(2) == 'order_success' ? 'active' : '' }}"> <a href='{{ route('orderSuccess') }}'>Hoàn thành</a></li>
-                     <li class="{{ request()->segment(2) == 'order_cancelled' ? 'active' : '' }}"> <a href='{{ route('orderCanceled') }}'>Đã hủy</a></li>
-                     <li class="{{ request()->segment(2) == 'order_return' ? 'active' : '' }}"> <a href='{{ route('orderReturn') }}'>Hoàn trả</a></li>
+                     <li class="{{ request()->segment(2) == 'order' ? 'active' : '' }}"> <a
+                             href="{{ route('adminOrder') }}">Tất cả đơn hàng</a> </li>
+                     <li class="{{ request()->segment(2) == 'order_confirm' ? 'active' : '' }}"> <a
+                             href="{{ route('orderConfirm') }}">Chờ xác nhận</a> </li>
+                     <li class="{{ request()->segment(2) == 'order_shipping' ? 'active' : '' }}"> <a
+                             href='{{ route('orderShipping') }}'>Vận chuyển</a></li>
+                     <li class="{{ request()->segment(2) == 'order_waiting' ? 'active' : '' }}"> <a
+                             href='{{ route('orderWaiting') }}'>Chờ giao hàng</a></li>
+                     <li class="{{ request()->segment(2) == 'order_success' ? 'active' : '' }}"> <a
+                             href='{{ route('orderSuccess') }}'>Hoàn thành</a></li>
+                     <li class="{{ request()->segment(2) == 'order_cancelled' ? 'active' : '' }}"> <a
+                             href='{{ route('orderCanceled') }}'>Đã hủy</a></li>
+                     <li class="{{ request()->segment(2) == 'order_return' ? 'active' : '' }}"> <a
+                             href='{{ route('orderReturn') }}'>Hoàn trả</a></li>
                  </ul>
              </li>
 

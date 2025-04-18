@@ -247,7 +247,7 @@ class PaymentController extends Controller
             'status' => 'success'
         ], 200);
     }
-
+    
     public function checkOutApplyVoucher(Request $request)
     {
         $discountCode = DiscountCode::checkDiscount($request->voucher);
@@ -330,7 +330,6 @@ class PaymentController extends Controller
             $order->discount_code = $request->discount_code;
             $order->total_price = $newTotal;
             $order->total_amount = $deducted_amount;
-            ;
             $order->note = $request->note;
 
             $order->save();
@@ -435,7 +434,6 @@ class PaymentController extends Controller
                 echo json_encode($returnData);
             }
         } elseif ($request->payment_method == 'momo') {
-
             header('Content-type: text/html; charset=utf-8');
             function execPostRequest($url, $data)
             {

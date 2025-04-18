@@ -10,6 +10,7 @@ class Category extends Model
     use HasFactory;
     protected $table = 'category';
     public $timestamps = false;
+    protected $guarded = [];
 
     static function getCategory()
     {
@@ -26,7 +27,7 @@ class Category extends Model
     public function sub_category()
     {
         return $this->hasMany(SubCategory::class, 'category_id')
-        ->where('sub_category.status', 1)
-        ->orderBy('id', 'desc');
+            ->where('sub_category.status', 1)
+            ->orderBy('id', 'desc');
     }
 }

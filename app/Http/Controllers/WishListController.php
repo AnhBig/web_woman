@@ -13,8 +13,6 @@ class WishListController extends Controller
         $wishlists = WishList::with('product')->where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
         // return response()->json($wishlists);
         return view('user.wishlist.wishlist', compact('wishlists'));
-
-
     }
 
     public function addProductWishList(Request $request)
@@ -44,9 +42,6 @@ class WishListController extends Controller
                 ]);
             }
         }
-
-
-
     }
 
     public function removeWishlist($id)

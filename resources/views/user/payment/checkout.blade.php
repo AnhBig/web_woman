@@ -318,7 +318,6 @@
             // auto complete newaddress
             $("#auto_new_address").click();
 
-
             // address checkout
             let data = {};
             $.ajax({

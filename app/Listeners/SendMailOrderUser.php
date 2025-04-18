@@ -34,6 +34,7 @@ class SendMailOrderUser implements ShouldQueue
         // $email = new OrderUser($user, $dataOrder);
         // $user = Mail::to($user->email)->send($email);
 
+        // Mail::to($user->email)->send(new OrderUser($user, $dataOrder, $order));
         Mail::to($user->email)->send(new OrderUser($user, $dataOrder, $order));
 
     }

@@ -21,8 +21,7 @@ class AuthController extends Controller
 {
     public function login_admin()
     {
-        // $qq = Hash::make('123456789');
-        // dd($qq);
+
         if (!empty(Auth::check() && Auth::user()->is_admin == 1)) {
             return redirect('admin/dashboard');
         }
@@ -41,7 +40,7 @@ class AuthController extends Controller
     public function logout_admin()
     {
         Auth::logout();
-        return  redirect('admin');
+        return redirect('admin');
     }
 
 
@@ -129,11 +128,12 @@ class AuthController extends Controller
             ]
         );
 
-        $checkAuth =  Auth::attempt([
+        $remember = $request->has('remember') ? true : false;
+        $checkAuth = Auth::attempt([
             'email' => $request->signin_email,
             'password' => $request->signin_password,
             'status' => 1
-        ]);
+        ], $remember);
 
         if (!$validator->fails() && $checkAuth) {
             return response()->json(

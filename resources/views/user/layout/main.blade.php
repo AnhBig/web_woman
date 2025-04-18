@@ -101,7 +101,10 @@
                                             <p class="text-danger" id="error_login"></p>
                                         </div>
                                         <!-- End .form-group -->
-
+                                        <div class="form-group">
+                                            <input type="checkbox" id="signin-remember" name="remember">
+                                            <label for="signin-remember">Nhớ tôi</label>
+                                        </div>
                                         <div class="form-footer">
                                             <button type="submit" class="btn btn-outline-primary-2">
                                                 <span>Đăng nhập</span>
@@ -318,6 +321,7 @@
                 var sigin_email = $('#signin-email')
                 var sigin_password = $('#signin-password')
                 var email_signin_error = $('#email_signin_error')
+                var remember = $('#remember')
                 var password_signin_error = $('#password_signin_error')
                 var error_login = $('#error_login')
 

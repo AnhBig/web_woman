@@ -123,7 +123,7 @@
                                      <div class="form-group">
                                          <label for="br">Mô tả ngắn:</label>
                                          <textarea name="" class="form-control" readonly cols="10" rows="3">
-                                            {{ $seeProductDetail->short_description }}                        
+                                            {{ $seeProductDetail->short_description }}  
                                         </textarea>
                                      </div>
                                  </form>
@@ -164,7 +164,7 @@
                                          <label for="br">Thông tin thêm:</label>
                                          <textarea name="" class="form-control" readonly cols="10" rows="5">
                                                               {!! $seeProductDetail->additional_information !!}
-                                                            </textarea>
+                                            </textarea>
                                      </div>
                                      <div class="form-group">
                                          <label for="br">Vận chuyển trả hàng:</label>

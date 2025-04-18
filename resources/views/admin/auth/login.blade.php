@@ -65,23 +65,17 @@
                                                 <div class="col-12">
                                                     <div class="d-block d-sm-flex  align-items-center">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
+                                                            <input class="form-check-input" name="remember" type="checkbox"
                                                                 id="gridCheck">
                                                             <label class="form-check-label" for="gridCheck">
                                                                 Nhớ tôi
                                                             </label>
                                                         </div>
-                                                        <a href="javascript:void(0);" class="ml-auto">Quên mật khẩu
-                                                            ?</a>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mt-3">
                                                     <button type="submit" class="btn btn-primary text-uppercase">Đăng
                                                         nhập</button>
-                                                </div>
-                                                <div class="col-12  mt-3">
-                                                    <p>Don't have an account ?<a href="auth-register.html"> Sign Up</a>
-                                                    </p>
                                                 </div>
                                             </div>
                                         </form>

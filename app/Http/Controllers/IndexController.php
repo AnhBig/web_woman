@@ -21,7 +21,6 @@ class IndexController extends Controller
         return view('user.index', compact('category', 'productHot', 'product', 'productAll'));
     }
 
-   
 
     public function getProductBySearch(Request $request)
     {

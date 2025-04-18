@@ -14,7 +14,6 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::getCategory();
-        // return response()->json($category);
         return view('admin.category.list', compact('category'));
     }
 
